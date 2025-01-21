@@ -56,17 +56,7 @@ DB_PASSWORD=secret
 
 > If the `.env` file is missing, you can copy the `.env.example` file and rename it to `.env`.
 
-### 4. Run Migrations
-
-To set up the database schema, run the migrations:
-
-```bash
-docker exec -it app php artisan migrate
-```
-
-This command will apply the database migrations to the `order_db` MySQL database.
-
-### 5. Test the API
+### 4. Test the API
 
 Once the application is running, you can send a `POST` request to the following endpoint:
 
