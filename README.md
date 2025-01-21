@@ -26,7 +26,7 @@ cd smindle-order-api
 To set up the application with Docker, make sure **Docker** and **Docker Compose** are installed. Then, run the following command to start both the Laravel application and MySQL containers:
 
 ```bash
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 This will:
