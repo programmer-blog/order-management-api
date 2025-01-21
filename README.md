@@ -17,11 +17,28 @@ A Laravel-based API for managing orders and order items, including handling subs
 First, clone the repository to your local machine using `git`:
 
 ```bash
-git clone https://github.com/yourusername/smindle-order-api.git
-cd smindle-order-api
+git clone git@github.com:programmer-blog/order-management-api.git
+cd order-management-api
+```
+### 2. Set Up Environment Variables
+
+Ensure that the `.env` file in the project root contains the correct configuration for your application, especially for connecting to the MySQL database.
+
+Your `.env` file should include:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=order_db
+DB_USERNAME=root
+DB_PASSWORD=secret
 ```
 
-### 2. Docker Setup
+> If the `.env` file is missing, you can copy the `.env.example` file and rename it to `.env`.
+
+
+### 3. Docker Setup
 
 To set up the application with Docker, make sure **Docker** and **Docker Compose** are installed. Then, run the following command to start both the Laravel application and MySQL containers:
 
@@ -38,23 +55,6 @@ You can verify that both containers are running by using:
 ```bash
 docker ps
 ```
-
-### 3. Set Up Environment Variables
-
-Ensure that the `.env` file in the project root contains the correct configuration for your application, especially for connecting to the MySQL database.
-
-Your `.env` file should include:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=order_db
-DB_USERNAME=root
-DB_PASSWORD=secret
-```
-
-> If the `.env` file is missing, you can copy the `.env.example` file and rename it to `.env`.
 
 ### 4. Test the API
 
@@ -88,7 +88,7 @@ http://localhost:8000/api/orders
 
 This will create a new order, including order items, and send asynchronous requests for subscription items to a third-party service.
 
-### 6. Access the Application
+### 5. Access the Application
 
 You can access the Laravel application via the following URL:
 
@@ -96,7 +96,7 @@ You can access the Laravel application via the following URL:
 http://localhost:8000
 ```
 
-### 7. Stop the Containers
+### 6. Stop the Containers
 
 Once you're done testing, you can stop the running containers:
 
